@@ -13,13 +13,13 @@ Click ok
 Click apply on Access Protection
 Click ok
 #>
-
+$SMTPRelay = 'MailRelay01'
 $Array1= "Mickey Mouse", "Donald Duck", "Goofy"
 
-Send-MailMessage -to "james.j.honeycutt.civ@mail.mil" -from "HoneycuttPowerShell@mail.mil" `
+Send-MailMessage -to "P0w3rChi3f@pm.me" -from "P0w3rChi3f-PowerShell@pm.me" `
 -Subject "This is only a test" `
 -body "This is a test message from powershell $Array1 Only A test" `
--Smtphost NGPEB3-MAILRELAY
+-Smtphost $SMTPRelay
 
-Send-MailMessage -to james.j.honeycutt.civ@mail.mil -from HoneycuttPowerShell@mail.mil -Subject "This is only a test" -body "This is a test message from powershell " $Array1.ToString().Split(" ") + " Only A test" -Smtphost SMTPServer.FQDN.com
+Send-MailMessage -to P0w3rChi3f@pm.me -from P0w3rChi3f-PowerShell@pm.me -Subject "This is only a test" -body "This is a test message from powershell " $Array1.ToString().Split(" ") + " Only A test" -Smtphost SMTPServer.FQDN.com
 
